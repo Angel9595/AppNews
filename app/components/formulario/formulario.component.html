@@ -1,0 +1,20 @@
+<mat-card class="card">
+  <form (ngSubmit)="buscarNoticia()" >
+  <span class="title">Buscador de Noticias</span>
+<mat-form-field  appearance="outline" style="width: 100%; margin-top:10px;">
+  <mat-label >{{categoriaSeleccionada}}</mat-label>
+  <mat-select  [(ngModel)]="categoriaSeleccionada" name="categoriaSeleccionada">
+    <mat-option [value]="categoria.value" *ngFor="let categoria of Categorias">{{categoria.nombre}}</mat-option>
+  </mat-select>
+</mat-form-field>
+    <mat-divider style="opacity: 0%;"  inset></mat-divider>
+  <mat-form-field appearance="outline" style="width: 100%;">
+    <mat-label >{{paisSeleccionado}}</mat-label>
+    <mat-select [(ngModel)]="paisSeleccionado" name="paisSeleccionado">
+      <mat-option [value]="pais.value" *ngFor="let pais of Paises" >{{pais.nombre}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button type="submit" style="width: 100%;" mat-raised-button color="primary">BUSCAR</button>
+</form>
+  </mat-card>
+

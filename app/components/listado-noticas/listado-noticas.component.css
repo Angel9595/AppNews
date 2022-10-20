@@ -1,0 +1,27 @@
+.cards{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+margin-left: 10px;
+
+
+}
+
+.noticias {
+width:300px;
+margin:10px
+}
+ 
+img{
+    width:100%;
+    border-radius: 7%;
+    margin:5px;
+}
+
+@media screen and (max-width: 600px) {
+    .noticias{
+     width:100%;
+     margin:10px
+    }
+    
+}
